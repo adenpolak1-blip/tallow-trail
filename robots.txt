@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tallow-trail.vercel.app/sitemap.xml
