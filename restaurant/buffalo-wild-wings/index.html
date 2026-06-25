@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Is Buffalo Wild Wings seed-oil-free? — Houston</title>
+<meta name="description" content="Seed-oil-free guide for Buffalo Wild Wings in Houston: what they cook in, what to order, what to skip, and last checked date.">
+<link rel="canonical" href="https://tallow-trail.vercel.app/restaurant/buffalo-wild-wings">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bone:#F1EBDD;
+    --bone-2:#E8E0CE;
+    --cream:#FBF7EF;
+    --ink:#1C1815;
+    --ink-soft:#4A4138;
+    --rule:#CDC2A8;
+    --clean:#2F6B3C;
+    --clean-bg:#E4EDE0;
+    --around:#B26C1B;
+    --around-bg:#F3E7D0;
+    --avoid:#9E2C1B;
+    --avoid-bg:#F1DCD6;
+    --oxblood:#7E2A1A;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bone);
+    color:var(--ink);
+    font-family:"Newsreader",Georgia,serif;
+    font-size:18px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:0 22px;}
+  .mono{font-family:"Space Mono",monospace;}
+  a{color:var(--oxblood);}
+
+  /* ---------- Masthead ---------- */
+  header.top{
+    border-bottom:3px solid var(--ink);
+    padding-top:30px;
+  }
+  .eyebrow{
+    font-family:"Space Mono",monospace;
+    font-size:12px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .brand{
+    font-family:"Oswald",sans-serif;
+    font-weight:700;
+    font-size:clamp(46px,11vw,86px);
+    line-height:.92;
+    letter-spacing:-.01em;
+    text-transform:uppercase;
+    margin:6px 0 4px;
+  }
+  .brand .dot{color:var(--oxblood);}
+  .tagline{
+    font-family:"Space Mono",monospace;
+    font-size:14px;
+    letter-spacing:.04em;
+    color:var(--ink-soft);
+    padding-bottom:18px;
+    display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+    border-bottom:1px solid var(--rule);
+  }
+
+  /* ---------- Hero thesis ---------- */
+  .hero{padding:38px 0 30px;border-bottom:1px solid var(--rule);}
+  .hero h1{
+    font-family:"Oswald",sans-serif;
+    font-weight:600;
+    font-size:clamp(28px,5.4vw,44px);
+    line-height:1.05;
+    margin:0 0 16px;
+    max-width:18ch;
+  }
+  .hero h1 em{font-style:normal;color:var(--oxblood);}
+  .hero p{font-size:19px;max-width:60ch;margin:0 0 8px;color:var(--ink-soft);}
+
+  /* ---------- Verdict legend ---------- */
+  .legend{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px;}
+  .seal{
+    font-family:"Space Mono",monospace;
+    font-weight:700;
+    font-size:11px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    padding:7px 13px;
+    border-radius:40px;
+    border:1.5px solid currentColor;
+    display:inline-flex;align-items:center;gap:7px;
+    white-space:nowrap;
+  }
+  .seal::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;}
+  .seal.clean{color:var(--clean);background:var(--clean-bg);}
+  .seal.around{color:var(--around);background:var(--around-bg);}
+  .seal.avoid{color:var(--avoid);background:var(--avoid-bg);}
+
+  /* ---------- Section heads ---------- */
+  section{padding:42px 0;border-bottom:1px solid var(--rule);}
+  .sec-eyebrow{
+    font-family:"Space Mono",monospace;
+    font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--oxblood);margin-bottom:10px;
+  }
+  .sec-title{
+    font-family:"Oswald",sans-serif;font-weight:600;
+    font-size:clamp(24px,4.6vw,34px);line-height:1.08;margin:0 0 8px;
+  }
+  .sec-note{color:var(--ink-soft);font-size:16px;max-width:62ch;margin:0 0 26px;}
+
+  /* ---------- Filter ---------- */
+  .filter{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px;}
+  .filter button{
+    font-family:"Space Mono",monospace;font-size:12px;font-weight:700;
+    letter-spacing:.08em;text-transform:uppercase;
+    background:transparent;color:var(--ink-soft);
+    border:1.5px solid var(--rule);border-radius:40px;
+    padding:8px 15px;cursor:pointer;transition:.15s;
+  }
+  .filter button:hover{border-color:var(--ink);color:var(--ink);}
+  .filter button[aria-pressed="true"]{background:var(--ink);color:var(--bone);border-color:var(--ink);}
+  .filter button:focus-visible{outline:3px solid var(--oxblood);outline-offset:2px;}
+
+  /* ---------- Report cards ---------- */
+  .report{
+    background:var(--cream);
+    border:1px solid var(--rule);
+    border-left:5px solid var(--ink);
+    border-radius:3px;
+    padding:22px 24px;
+    margin-bottom:16px;
+  }
+  .report.v-clean{border-left-color:var(--clean);}
+  .report.v-around{border-left-color:var(--around);}
+  .report.v-avoid{border-left-color:var(--avoid);}
+  .r-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;}
+  .r-name{font-family:"Oswald",sans-serif;font-weight:600;font-size:24px;line-height:1.05;margin:0;}
+  .r-meta{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.04em;color:var(--ink-soft);text-transform:uppercase;margin-top:4px;}
+  .r-body{margin-top:16px;display:grid;gap:11px;}
+  .r-row{display:grid;grid-template-columns:96px 1fr;gap:12px;align-items:baseline;}
+  .r-key{font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);padding-top:2px;}
+  .r-val{font-size:16.5px;line-height:1.45;}
+  .r-val.good{color:var(--clean);}
+  .r-val.bad{color:var(--avoid);}
+  .r-foot{
+    margin-top:16px;padding-top:12px;border-top:1px dashed var(--rule);
+    font-family:"Space Mono",monospace;font-size:11px;color:var(--ink-soft);
+    letter-spacing:.03em;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq details{
+    border-bottom:1px solid var(--rule);padding:18px 0;
+  }
+  .faq summary{
+    font-family:"Oswald",sans-serif;font-weight:500;font-size:21px;
+    cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;
+  }
+  .faq summary::-webkit-details-marker{display:none;}
+  .faq summary::after{content:"+";font-family:"Space Mono",monospace;color:var(--oxblood);font-weight:700;}
+  .faq details[open] summary::after{content:"-";}
+  .faq p{margin:14px 0 0;color:var(--ink-soft);font-size:17px;max-width:64ch;}
+
+  /* ---------- CTA / flywheel ---------- */
+  .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .cta-card{background:var(--ink);color:var(--bone);border-radius:4px;padding:26px 24px;}
+  .cta-card h3{font-family:"Oswald",sans-serif;font-weight:600;font-size:22px;margin:0 0 8px;}
+  .cta-card p{font-size:16px;color:#D9CFBA;margin:0 0 16px;}
+  .cta-card a{
+    font-family:"Space Mono",monospace;font-size:13px;font-weight:700;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--bone);border:1.5px solid #6c6253;border-radius:40px;
+    padding:9px 16px;display:inline-block;text-decoration:none;transition:.15s;
+  }
+  .cta-card a:hover{background:var(--oxblood);border-color:var(--oxblood);}
+
+  /* ---------- Footer ---------- */
+  footer{padding:40px 0 60px;}
+  .method{font-size:15px;color:var(--ink-soft);max-width:64ch;}
+  .disclaim{
+    font-family:"Space Mono",monospace;font-size:12px;line-height:1.7;color:var(--ink-soft);
+    background:var(--bone-2);border:1px solid var(--rule);border-radius:4px;padding:16px 18px;margin-top:22px;
+  }
+
+  @media(max-width:560px){
+    body{font-size:17px;}
+    .cta-grid{grid-template-columns:1fr;}
+    .r-row{grid-template-columns:1fr;gap:3px;}
+    .r-key{padding-top:8px;}
+  }
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none!important;}}
+
+  .crumb{display:inline-block;margin:28px 0 0;font-family:"Space Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;}
+  .restaurant-page{padding:34px 0 44px;}
+  .restaurant-page .report{margin-top:24px;}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">Houston field guide · Est. 2026</div>
+    <div class="brand">Ren<span class="dot">.</span></div>
+    <div class="tagline">
+      <span>Eat seed-oil-free anywhere in Houston</span>
+      <span>Updated June 25, 2026</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap restaurant-page">
+  <a class="crumb" href="/">← Back to reports</a>
+
+  <section>
+    <div class="sec-eyebrow">Restaurant report · Houston, TX</div>
+    <h1 class="sec-title">Is Buffalo Wild Wings seed-oil-free?</h1>
+    <p class="sec-note">Buffalo Wild Wings is an order-around restaurant in Houston. They cook in Wings fried in beef tallow, other items unconfirmed. Order Traditional wings, ask which sauces are clean, and skip Non-wing fried items and sauces until confirmed.</p>
+
+    <article class="report v-around" data-verdict="v-around">
+      <div class="r-head">
+        <div>
+          <h2 class="r-name">Buffalo Wild Wings</h2>
+          <div class="r-meta">Multiple locations · Wings</div>
+        </div>
+        <span class="seal around">Order Around</span>
+      </div>
+      <div class="r-body">
+          <div class="r-row"><span class="r-key">Verdict</span><span class="r-val">Order Around</span></div>
+          <div class="r-row"><span class="r-key">Neighborhood</span><span class="r-val">Multiple locations</span></div>
+          <div class="r-row"><span class="r-key">Cuisine</span><span class="r-val">Wings</span></div>
+          <div class="r-row"><span class="r-key">Cooks in</span><span class="r-val">Wings fried in beef tallow, other items unconfirmed</span></div>
+          <div class="r-row"><span class="r-key">Order this</span><span class="r-val">Traditional wings, ask which sauces are clean</span></div>
+          <div class="r-row"><span class="r-key">Skip</span><span class="r-val">Non-wing fried items and sauces until confirmed</span></div>
+          <div class="r-row"><span class="r-key">Watch</span><span class="r-val">Confirm details with the kitchen before ordering.</span></div>
+          <div class="r-row"><span class="r-key">Source</span><span class="r-val">brand/kitchen reports</span></div>
+          <div class="r-row"><span class="r-key">Last checked</span><span class="r-val">Jun 2026</span></div>
+      </div>
+      <div class="r-foot"><span>Source: brand/kitchen reports</span><span>Last checked Jun 2026</span></div>
+    </article>
+  </section>
+</main>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Buffalo Wild Wings use seed oils?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Buffalo Wild Wings is an order-around restaurant in Houston. They cook in Wings fried in beef tallow, other items unconfirmed. Order Traditional wings, ask which sauces are clean, and skip Non-wing fried items and sauces until confirmed."
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
