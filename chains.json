@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Chipotle",
+    "slug": "chipotle",
+    "verdict": "around",
+    "cooks_in": "Carnitas are cooked in their own fat. Rice bran oil is used for most items.",
+    "order_this": "Carnitas bowl with guac and salsa.",
+    "skip_this": "Skip anything else that uses rice bran oil. Avoid the vinaigrette.",
+    "watch": "Guac and salsa are clean.",
+    "source": "chain order-around guide",
+    "last_checked": "Jun 2026"
+  },
+  {
+    "name": "Five Guys",
+    "slug": "five-guys",
+    "verdict": "around",
+    "cooks_in": "Burgers are cooked on a clean flat-top with no oil. Fries are cooked in peanut oil.",
+    "order_this": "Any burger lettuce-wrapped with no bun.",
+    "skip_this": "Skip the fries.",
+    "watch": "Confirm toppings and sauces if strict.",
+    "source": "chain order-around guide",
+    "last_checked": "Jun 2026"
+  },
+  {
+    "name": "Buffalo Wild Wings",
+    "slug": "buffalo-wild-wings",
+    "verdict": "around",
+    "cooks_in": "Traditional wings are fried in beef tallow. Boneless wings use a different fryer.",
+    "order_this": "Traditional wings.",
+    "skip_this": "Skip boneless wings.",
+    "watch": "Ask about sauces before ordering.",
+    "source": "chain order-around guide",
+    "last_checked": "Jun 2026"
+  }
+]
