@@ -245,5 +245,18 @@
     "watch": "nothing",
     "source": "People",
     "last_checked": "Jun 2026"
+  },
+  {
+    "name": "Restaurant",
+    "slug": "test-restaurant-2",
+    "neighborhood": "Spring Valley",
+    "cuisine": "Mexican",
+    "verdict": "clean",
+    "cooks_in": "beef tallow",
+    "order_this": "everything",
+    "skip_this": "nothing",
+    "watch": "nothing",
+    "source": "People",
+    "last_checked": "Jun 2026"
   }
 ]
