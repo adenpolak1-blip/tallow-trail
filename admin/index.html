@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ren Admin — Add Restaurant</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bone:#F1EBDD;
+    --bone-2:#E8E0CE;
+    --cream:#FBF7EF;
+    --ink:#1C1815;
+    --ink-soft:#4A4138;
+    --rule:#CDC2A8;
+    --clean:#2F6B3C;
+    --around:#B26C1B;
+    --avoid:#9E2C1B;
+    --oxblood:#7E2A1A;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bone);
+    color:var(--ink);
+    font-family:"Newsreader",Georgia,serif;
+    font-size:18px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:0 22px;}
+  header.top{border-bottom:3px solid var(--ink);padding-top:30px;}
+  .eyebrow{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);}
+  .brand{font-family:"Oswald",sans-serif;font-weight:700;font-size:clamp(46px,11vw,86px);line-height:.92;letter-spacing:-.01em;text-transform:uppercase;margin:6px 0 4px;}
+  .brand .dot{color:var(--oxblood);}
+  .tagline{font-family:"Space Mono",monospace;font-size:14px;letter-spacing:.04em;color:var(--ink-soft);padding-bottom:18px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;border-bottom:1px solid var(--rule);}
+  main{padding:38px 0 60px;}
+  .sec-eyebrow{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--oxblood);margin-bottom:10px;}
+  h1{font-family:"Oswald",sans-serif;font-weight:600;font-size:clamp(28px,5.4vw,44px);line-height:1.05;margin:0 0 12px;}
+  .note{color:var(--ink-soft);max-width:62ch;margin:0 0 26px;}
+  .panel{background:var(--cream);border:1px solid var(--rule);border-left:5px solid var(--oxblood);border-radius:3px;padding:22px 24px;}
+  form{display:grid;gap:15px;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;}
+  label{display:grid;gap:5px;font-family:"Space Mono",monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);}
+  input,select,textarea{
+    width:100%;
+    border:1.5px solid var(--rule);
+    border-radius:3px;
+    background:#fffaf2;
+    color:var(--ink);
+    font:16px/1.35 "Newsreader",Georgia,serif;
+    padding:10px 11px;
+  }
+  textarea{min-height:84px;resize:vertical;}
+  input:focus,select:focus,textarea:focus{outline:3px solid rgba(126,42,26,.25);border-color:var(--oxblood);}
+  button{
+    justify-self:start;
+    font-family:"Space Mono",monospace;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    border:1.5px solid var(--ink);
+    border-radius:40px;
+    background:var(--ink);
+    color:var(--bone);
+    padding:10px 18px;
+    cursor:pointer;
+  }
+  button:disabled{opacity:.55;cursor:not-allowed;}
+  .status{font-family:"Space Mono",monospace;font-size:12px;line-height:1.6;color:var(--ink-soft);white-space:pre-wrap;}
+  .hidden{display:none;}
+  @media(max-width:640px){.grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">Private admin</div>
+    <div class="brand">Ren<span class="dot">.</span></div>
+    <div class="tagline">
+      <span>Add a Houston restaurant report</span>
+      <span>Noindex</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="sec-eyebrow">Admin</div>
+  <h1>Add restaurant</h1>
+  <p class="note">Submissions append to <code>restaurants.json</code> in GitHub and trigger the configured Vercel deploy hook.</p>
+
+  <section id="login" class="panel">
+    <form id="login-form">
+      <label>Password
+        <input id="password" name="password" type="password" autocomplete="current-password" required>
+      </label>
+      <button type="submit">Unlock</button>
+      <div id="login-status" class="status"></div>
+    </form>
+  </section>
+
+  <section id="admin-panel" class="panel hidden">
+    <form id="restaurant-form">
+      <div class="grid">
+        <label>Name
+          <input name="name" required>
+        </label>
+        <label>Slug
+          <input name="slug" pattern="[a-z0-9]+(?:-[a-z0-9]+)*" placeholder="example-restaurant" required>
+        </label>
+        <label>Neighborhood
+          <input name="neighborhood" required>
+        </label>
+        <label>Cuisine
+          <input name="cuisine" required>
+        </label>
+        <label>Verdict
+          <select name="verdict" required>
+            <option value="clean">clean</option>
+            <option value="around">around</option>
+            <option value="avoid">avoid</option>
+          </select>
+        </label>
+        <label>Last checked
+          <input name="last_checked" value="Jun 2026" required>
+        </label>
+      </div>
+      <label>Cooks in
+        <textarea name="cooks_in" required></textarea>
+      </label>
+      <label>Order this
+        <textarea name="order_this" required></textarea>
+      </label>
+      <label>Skip this
+        <textarea name="skip_this"></textarea>
+      </label>
+      <label>Watch
+        <textarea name="watch"></textarea>
+      </label>
+      <label>Source
+        <input name="source" required>
+      </label>
+      <button id="submit-button" type="submit">Add restaurant</button>
+      <div id="status" class="status"></div>
+    </form>
+  </section>
+</main>
+
+<script>
+  (function(){
+    var ADMIN_PASSWORD = 'ren-admin-2026';
+    var savedPassword = sessionStorage.getItem('ren_admin_password') || '';
+    var login = document.getElementById('login');
+    var panel = document.getElementById('admin-panel');
+    var loginForm = document.getElementById('login-form');
+    var restaurantForm = document.getElementById('restaurant-form');
+    var loginStatus = document.getElementById('login-status');
+    var status = document.getElementById('status');
+    var submitButton = document.getElementById('submit-button');
+
+    function unlock(password){
+      if(password !== ADMIN_PASSWORD){
+        loginStatus.textContent = 'Wrong password.';
+        return;
+      }
+      sessionStorage.setItem('ren_admin_password', password);
+      login.classList.add('hidden');
+      panel.classList.remove('hidden');
+    }
+
+    if(savedPassword){ unlock(savedPassword); }
+
+    loginForm.addEventListener('submit', function(event){
+      event.preventDefault();
+      unlock(document.getElementById('password').value);
+    });
+
+    restaurantForm.addEventListener('submit', function(event){
+      event.preventDefault();
+      status.textContent = 'Submitting...';
+      submitButton.disabled = true;
+
+      var formData = new FormData(restaurantForm);
+      var payload = { password: sessionStorage.getItem('ren_admin_password') };
+      formData.forEach(function(value, key){
+        payload[key] = String(value).trim();
+      });
+
+      fetch('/api/add-restaurant', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+        .then(function(response){
+          return response.json().then(function(body){
+            if(!response.ok){ throw new Error(body.error || 'Request failed'); }
+            return body;
+          });
+        })
+        .then(function(body){
+          status.textContent = 'Added ' + body.restaurant.name + '. Commit: ' + body.commit + '\\nDeploy hook triggered: ' + (body.deployTriggered ? 'yes' : 'no');
+          restaurantForm.reset();
+          restaurantForm.elements.last_checked.value = 'Jun 2026';
+        })
+        .catch(function(error){
+          status.textContent = 'Error: ' + error.message;
+        })
+        .finally(function(){
+          submitButton.disabled = false;
+        });
+    });
+  })();
+</script>
+</body>
+</html>
